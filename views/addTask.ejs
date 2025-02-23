@@ -2,15 +2,23 @@
 <html>
 <head>
     <title>Add Task</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        form { display: inline-block; text-align: left; }
+        label, input, textarea { display: block; margin-bottom: 10px; width: 100%; }
+        button { background-color: green; color: white; padding: 10px; }
+    </style>
 </head>
 <body>
-    <h1>Add a New Task</h1>
+    <h1>➕ Add a New Task</h1>
     <form action="/add-task" method="POST">
         <label>Title:</label>
-        <input type="text" name="title" required><br>
+        <input type="text" name="title" required>
         <label>Description:</label>
-        <textarea name="description" required></textarea><br>
+        <textarea name="description" required></textarea>
         <button type="submit">Add Task</button>
     </form>
+    <br>
+    <a href="/tasks">⬅️ Back to Tasks</a>
 </body>
 </html>

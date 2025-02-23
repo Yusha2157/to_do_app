@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>All Tasks</title>
+    <title>Task List</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 10px 0; font-size: 18px; }
+        a { text-decoration: none; color: blue; }
+    </style>
 </head>
 <body>
-    <h1>Task List</h1>
+    <h1>📝 My Tasks</h1>
     <ul>
         <% tasks.forEach(task => { %>
-            <li><a href="/task?id=<%= task.id %>"><%= task.title %></a></li>
+            <li>
+                <a href="/task?id=<%= task.id %>"><%= task.title %></a>
+            </li>
         <% }); %>
     </ul>
-    <a href="/addtask">Add Task</a>
+    <a href="/add-task">➕ Add New Task</a>
 </body>
 </html>
+
